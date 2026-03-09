@@ -29,5 +29,24 @@ int is_lucky(int number) {
 }
 
 int main() {
+    int count = 0;
+    
+    printf("Шестизначные счастливые номера:\n");
+    
+    // Перебираем все шестизначные числа
+    for (int i = 100000; i <= 999999; i++) {
+        if (is_lucky(i)) {
+            printf("%d ", i);
+            count++;
+            
+            // Печатаем по 10 чисел в строке
+            if (count % 10 == 0) {
+                printf("\n");
+            }
+        }
+    }
+    
+    printf("Всего найдено счастливых номеров: %d\n", count);
+    
     return 0;
 }

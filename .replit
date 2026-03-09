@@ -1,2 +1,28 @@
 language = "c"
 run = "gcc -o hello /home/runner/project2/src/hello.c"
+
+[agent]
+expertMode = true
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start application"
+
+[[workflows.workflow]]
+name = "Start application"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd /home/runner/workspace && gcc -o hello src/hello.c && ./hello"
+
+[workflows.workflow.metadata]
+outputType = "console"

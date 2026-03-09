@@ -1,11 +1,14 @@
 # Overview
 
-It is public template of assignment `"labrabota 3"` for FPMI students
+Программа для поиска всех шестизначных «счастливых» номеров.  
+Счастливым считается число, у которого сумма первых трёх цифр равна сумме последних трёх.  
+Автор: Свибович Никита, группа 10
 
 # Usage
 
-Please, edit README and add some details, as instance **{add your last name, first name and group number}**.
+Запуск программы: `./labrabota2-1`  
+Программа выведет все счастливые номера и их общее количество.
 
 # Building
 
-Please, import repository and use for repl.it project, which is defined in the assignment "labrabota 3".
+Компиляция: `gcc -o labrabota2-1 src/main.c`
